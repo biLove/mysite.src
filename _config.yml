@@ -70,3 +70,5 @@ theme: fexo
 deploy:
   type: git
   repo: https://github.com/biLove/biLove.github.io.git
+  branch: master
+  plugins: -hexo-generator-cname
