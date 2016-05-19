@@ -1,6 +1,7 @@
 ---
 title: 独立域名配置
 date: 2016-05-19 15:22:07
+category: 建立博客
 tags: domain
 ---
 

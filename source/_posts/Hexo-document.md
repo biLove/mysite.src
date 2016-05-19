@@ -1,6 +1,7 @@
 ---
 title: ［转载］Hexo 配置文档
 date: 2016-05-19 10:36:20
+category: 建立博客
 tags: hexo
 ---
 

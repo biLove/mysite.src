@@ -1,6 +1,7 @@
 ---
 title: 在Mac上github＋hexo搭建博客（一）
 date: 2016-05-09 09:35:06
+category: 建立博客
 tags: 技术
 ---
 
