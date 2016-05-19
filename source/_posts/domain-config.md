@@ -13,7 +13,7 @@ tags: domain
 
 ## 将个人域名与Github Pages的空间绑定
 
-我的本地站点名称是 hexo-site ，详细的建立过程见 [在Mac上github＋hexo搭建博客（一）](http://lilyalove.com/2016/05/09/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%88%E4%B8%80%EF%BC%89/)
+我的本地站点名称是 hexo-site ，详细的建立过程见 [在Mac上github＋hexo搭建博客（一）](http://lilyalove.com/2016/05/09/hexo-github-mysite/)
 在 `hexo-site\source` 文件夹里新建一个名为 `CNAME` 的文件，用`sublime` 编辑器打开，或者本地编辑器也行，添加内容 `lilyalove.com`，也就是你购买的域名，保存。
 部署博客即可。
 
