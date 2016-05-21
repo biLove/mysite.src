@@ -202,3 +202,6 @@ $ hexo generate --deploy
 $ hexo deploy --generate
 ```
 
+由hexo版本引起的问题，hexo3.2.0的版本会造成很多奇怪的问题，例如 [错误](https://github.com/hexojs/hexo/issues/1793)，使用hexo3.1.1的版本就好了。
+
+

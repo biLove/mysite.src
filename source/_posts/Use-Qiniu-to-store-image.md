@@ -5,23 +5,16 @@ category: 建立博客
 tags: 技术
 ---
 
-对于我这种不太懂技术的人来说，搭建博客的每一个过程都不算轻松，但是做到了想做的事情之后却非常的开心。这篇博客主要是讲一下我使用七牛来储存图片的方法。
-
-搭建了博客，很自然的要写博客呀，不然不就白搭了么，写博客除了文字，当然图片也不会少了。我搭博客使用的是hexo＋github，但是githubPages只提供300m的空间，想想都觉得肯定不是用来储存图片的好方法了。
-于是通过了解，使用七牛来储存图片还是不错的。
-
 # [七牛](http://www.qiniu.com/)
 ![](http://o7i9sckjd.bkt.clouddn.com/static/images/Use-Qiniu-to-store-image/qiniu.png)
 七牛提供10g的永久免费存储空间以及每月10GB的下载流量，完全够一个小小的个人博客使用了。
 而且，就我个人注册和配置过程来看，七牛操作起来很简便，很省事
 
 # 如何配置
-这个过程既包括七牛的操作，也包括本地安装七牛插件和配置相关文件。
 
 ## 在七牛上建立自己的空间
 ![](http://o7i9sckjd.bkt.clouddn.com/static/images/Use-Qiniu-to-store-image/qiniu-space.png)
-选择第一项，对象存储，设置自己的空间名称，比如我的叫hexoimages，意味着这个空间会用来存储hexo博客的图片资源。
-在这里，会生成几个值，一个是外链默认域名，我的是o7i9sckjd.bkt.clouddn.com。
+选择第一项 **对象存储**，设置自己的空间名称，找到外链默认域名，我的是o7i9sckjd.bkt.clouddn.com。
 
 上传一张图片到七牛上，比如me.png，则可以通过以下链接来进行访问
 
@@ -29,15 +22,14 @@ tags: 技术
 http://o7i9sckjd.bkt.clouddn.com/me.png 
 ```
 
-## 在hexo中安装七牛插件
-我使用的是 [gyk001](https://github.com/gyk001/hexo-qiniu-sync) 的插件。
+## 在hexo中安装[hexo-qiniu-sync](https://github.com/gyk001/hexo-qiniu-sync)插件
 
 这是一个hexo插件， 可以让你在文档中入嵌存储在七牛上的图片、JS、CSS类型的静态文件。
 
 你可以不用手动上传文件到七牛，插件会自动帮你将本地目录的文件同步到七牛。
 
 ## 安装
-在本地的hexo主目录（我的目录是hexo-site）下运行以下命令进行安装：
+在本地的hexo主目录下运行以下命令进行安装：
 
 ```
 npm install hexo-qiniu-sync --save
@@ -83,13 +75,12 @@ qiniu:
 
 ## 注意
 
-1. 配置信息要注意缩进和空格的问题。一定要顶头显示，且不能用tab来缩进，要用两个空格的方式，不然会有各种找不到“offline”或者“bucket”或其他的问题。
-2. bucket填写自己的空间名
-3. access_key和secret_key可以从七牛的“个人面板－密钥管理”里面找就可以了；
-4. local_dir一定要写static目录的绝对路径，或者相对路径也行，不能直接写个static；同时，要在本地的博客站点根目录下建立一个static的文件夹；
-5. 其他的按照上面的说明来做即可。
+1. 一定要注意缩进的问题。不能用tab来缩进，要用两个空格。
+2. access_key和secret_key可以从七牛的“个人面板－密钥管理”里面找就可以了；
+3. local_dir一定要写static文件夹的准确路径，这个文件夹可以放在任何位置，设置好之后，在static里面存储你要同步到七牛的文件即可；
 
 配置完成后，使用 `hexo generate` 生成即可。
+
 生成后，会在static的文件夹里生成三个文件夹：image，js，css；
 可以按照单独的博客名来建立文件夹，给图片分类。
 例如本文的title是Use-Qiniu-to-store-image，我会在image文件夹里再建一个Use-Qiniu-to-store-image的文件夹，再把本文的图片放到这个文件夹里就好了。
@@ -101,7 +92,7 @@ qiniu:
 hexo qiniu sync
 ``` 
 
-既可以同步图片到七牛了
+就可以同步图片到七牛了
 
 ## 获取图片外链
 
