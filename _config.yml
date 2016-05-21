@@ -70,5 +70,26 @@ theme: fexo
 deploy:
   type: git
   repo: https://github.com/biLove/biLove.github.io.git
-  branch: master
-  plugins: -hexo-generator-cname
+  branch: master 
+# plugins: - hexo-generator-cname
+
+plugins:
+  - hexo-qiniu-sync #七牛云
+
+qiniu:
+  offline: false
+  sync: true
+  bucket: hexoimages
+  access_key: o7dtyB5wLiE8GzXiYNiIignPggu2NtFAA3_VHs0n
+  secret_key: bq2B6GVBS7FzRZ_U8GBb5aJW6wwaolzQAgVyc7yh
+  dirPrefix: /static
+  urlPrefix: http://o7i9sckjd.bkt.clouddn.com/static
+  local_dir: /Users/baoli/Desktop/hexo-qiniu-image/static ## //这个是需要传到七牛云的文件名，可以自行更改，images/js/css文件会在此文件夹下生成
+  update_exist: true
+  image:
+    folder: images
+    extend: 
+  js:
+    folder: js
+  css:
+    folder: css
