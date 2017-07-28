@@ -53,7 +53,7 @@ timestamp — 日期和时间。
 ## SQLite
 
 SQLite 是一个关系数据库管理系统。
-操作数据库之前，我们使用SQLite 的 sqlite3 命令被用来创建新的 SQLite 数据库。
+操作数据库之前，我们使用SQLite 的 sqlite3 命令被用来创建新的 SQLite 数据库。   
 
 ```bash
 $sqlite3 DatabaseName.db
@@ -65,7 +65,7 @@ $sqlite3 DatabaseName.db
 
 #### 查看数据库
 
-查看sqlite中的数据库
+查看sqlite中的数据库   
 
 ```
 .database
@@ -89,21 +89,21 @@ $sqlite3 DatabaseName.db
 
 ## 创建数据库
 
-如果数据库之前没有被创建，在使用如下命令后，
+如果数据库之前没有被创建，在使用如下命令后，   
 
 ```bash
 $sqlite3 DatabaseName.db
 ```
 
-会直接创建一个名为 ```DatabaseName.db``` 的数据库。
+会直接创建一个名为 DatabaseName.db 的数据库。
 
-也可用sql创建数据库
+也可用sql创建数据库    
 
 ```
 CREATE DATABASE 数据库名称
-```
+```   
 
-## 创建数据表
+## 创建数据表   
 
 ```
 CREATE TABLE 表名称
@@ -111,27 +111,27 @@ CREATE TABLE 表名称
 列名称1 数据类型,
 列名称2 数据类型,
 .......
-)
-```
+) 
+```  
 
 使用上述方法创建数据表，常见数据类型：Text, CHAR(size), VARCHAR(size), INT(size), FLOAT(size,d)
 
-## 删除数据表
+## 删除数据表   
 
 ```
 DROP TABLE table_name;
 ```
-
+   
 使用上述命令可以删除数据表
 
-## 从CSV文件导入数据
+## 从CSV文件导入数据   
 
 ```
 sqlite> .mode csv
 sqlite> .import baseball_data.csv baseball_data
 ```
 
-## 更改数据表名称
+## 更改数据表名称   
 
 ```
 sqlite> alter table old_name rename to newname;
@@ -141,7 +141,8 @@ sqlite> alter table old_name rename to newname;
 
 根据上面的方法，我建立了一个baseball.db的数据库，并建立了一个baseball数据表。
 
-#### 查看总行数
+#### 查看总行数   
+代码如下：
 
 ```
 select count(*) from baseball;
@@ -152,7 +153,8 @@ count(*)
 1157
 ```
 
-#### 找出使用右手，身高在72~75之间，体重最高的5个人的信息
+#### 找出使用右手，身高在72~75之间，体重最高的5个人的信息  
+代码如下：  
 
 ```
 select * from baseball
