@@ -12,7 +12,7 @@ tags: data
 
 目的是用来说明在分析数据前先绘制图表的重要性，以及离群值对统计的影响之大。
 
-![数据图表](../../img/425px-Anscombe's_quartet_3.svg.png)
+![数据图表](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/1280px-Anscombe%27s_quartet_3.svg.png)
 
 这四组数据的共同统计特性如下：
 
